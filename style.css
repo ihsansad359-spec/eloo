@@ -1,0 +1,97 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#fff7f2;
+  color:#5a3e36;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND PARALLAX */
+.bg{
+  position:fixed;
+  inset:0;
+  background:url('foto.jpg') center/cover no-repeat;
+  filter:blur(28px) brightness(1.15);
+  transform:scale(1.25);
+  will-change:transform;
+  z-index:-2;
+}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(to bottom,rgba(255,255,255,.75),#fff7f2);
+  z-index:-1;
+}
+
+/* LAYOUT */
+.container{
+  min-height:200vh;
+  padding:40px 16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:2.6rem;
+  margin-bottom:20px;
+}
+
+/* FOTO */
+.photo{
+  width:240px;height:240px;
+  border-radius:30px;
+  overflow:hidden;
+  cursor:pointer;
+  filter:blur(6px);
+  transition:1s ease;
+  box-shadow:0 25px 50px rgba(0,0,0,.2);
+  will-change:transform;
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo.active{filter:blur(0);transform:scale(1.06)}
+
+/* JURNAL */
+.journal{
+  max-width:680px;
+  margin-top:50px;
+  background:rgba(255,255,255,.85);
+  padding:28px;
+  border-radius:25px;
+  line-height:1.9;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  will-change:transform;
+}
+
+/* PERTANYAAN */
+.question{margin-top:45px;font-size:1.15rem}
+.options{margin-top:15px}
+button{
+  border:none;background:#ffb7a5;color:#5a3e36;
+  padding:12px 26px;border-radius:30px;margin:6px;
+  font-size:1rem;cursor:pointer;transition:.3s;
+}
+button:hover{transform:scale(1.05);background:#ff9f8a}
+.answer{margin-top:15px;font-style:italic}
+
+/* FOOTER */
+.footer{margin-top:60px;font-size:.8rem;opacity:.6}
+
+/* PARTIKEL JATUH */
+.fall{
+  position:fixed;top:-20px;font-size:20px;
+  animation:fall linear forwards;pointer-events:none;
+}
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg);opacity:0}
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  h1{font-size:2.1rem}
+  .photo{width:200px;height:200px}
+}

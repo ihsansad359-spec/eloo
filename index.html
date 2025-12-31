@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Bucin Tapi Bahagia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg" id="bg"></div>
+<div class="overlay"></div>
+
+<audio id="music" src="musik.mp3" loop></audio>
+
+<main class="container">
+  <h1>Bucin Tapi Bahagia</h1>
+
+  <div class="photo parallax" id="photo">
+    <img src="wen wen.jpeg" alt="kamu">
+  </div>
+
+  <section class="journal parallax">
+    <strong>Catatan Hari Ini 💕</strong>
+    <p>
+      Hal kecil jadi terasa penting
+      sejak kamu ada di dalamnya.
+    </p>
+    <p>
+      Kalau ini namanya cinta,
+      aku menjalaninya dengan bahagia.
+    </p>
+  </section>
+
+  <section class="question">
+    Kalau aku kangen, kamu bakal?
+    <div class="options">
+      <button onclick="answer(1)">Datang</button>
+      <button onclick="answer(2)">Telepon</button>
+    </div>
+    <div class="answer" id="answer"></div>
+  </section>
+
+  <footer class="footer">dibuat dengan rasa sayang 🤍</footer>
+</main>
+
+<script src="scripts.js"></script>
+</body>
+</html>
